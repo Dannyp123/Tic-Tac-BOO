@@ -4,12 +4,12 @@ function startGame() {
   }
   document.turn = "X";
   document.winner = null;
-  messageSpace(`${document.turn} get's to start!`);
+  messageSpace(`Person who choose ${document.turn} get's to start!`);
 }
 
 function nextTurn(square) {
   if (document.winner != null) {
-    messageSpace(`${document.turn} already Won!!`);
+    messageSpace(`Person who choose ${document.turn} already Won!!`);
   } else {
     if (square.innerText == "") {
       square.innerText = document.turn;
@@ -22,7 +22,9 @@ function nextTurn(square) {
 
 function switchTurn() {
   if (findingTheWinner(document.turn)) {
-    messageSpace(`WINNER WINNER CANDY FOR DINNER FOR ${document.turn}`);
+    messageSpace(
+      `WINNER WINNER CANDY FOR DINNER FOR WHO CHOOE ${document.turn}`
+    );
     document.winner = document.turn;
   } else {
     if (document.turn == "X") {
@@ -30,7 +32,7 @@ function switchTurn() {
     } else {
       document.turn = "X";
     }
-    messageSpace(`It is ${document.turn} 's turn`);
+    messageSpace(`It is who choose ${document.turn} turn`);
   }
 }
 
