@@ -1,0 +1,36 @@
+body {
+  background-color: lightblue;
+}
+
+.square {
+  height: 80px;
+  width: 80px;
+  font-size: 45pt;
+  text-align: center;
+}
+
+.game-board {
+  padding-top: 24px;
+  width: 270px;
+  margin: 0 auto 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+}
+
+#start-over {
+  text-decoration: none;
+  color: black;
+  font-size: 18pt;
+}
+
+#button {
+  margin-top: 16px;
+  position: relative;
+  left: 73px;
+}
