@@ -22,7 +22,7 @@ function nextTurn(square) {
 
 function switchTurn() {
   if (findingTheWinner(document.turn)) {
-    messageSpace("WINNER WINNER CHICKEN DINNER");
+    messageSpace(`WINNER WINNER CANDY FOR DINNER FOR ${document.turn}`);
     document.winner = document.turn;
   } else {
     if (document.turn == "X") {

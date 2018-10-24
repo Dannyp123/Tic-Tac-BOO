@@ -1,5 +1,7 @@
 body {
-  background-color: lightblue;
+  background-image: url("tictactoe-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .square {
@@ -7,6 +9,26 @@ body {
   width: 80px;
   font-size: 45pt;
   text-align: center;
+}
+
+#player-one {
+  color: orange;
+  font-weight: bold;
+}
+#name {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+#player-two {
+  color: orange;
+  font-weight: bold;
+  position: relative;
+  left: 900px;
+}
+#name2 {
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
 .game-board {
@@ -17,10 +39,13 @@ body {
 
 .header {
   text-align: center;
+  font-weight: bold;
+  color: rgb(255, 166, 0);
 }
 
 .message {
   text-align: center;
+  color: rgb(255, 166, 0);
 }
 
 #start-over {
@@ -30,7 +55,10 @@ body {
 }
 
 #button {
+  background-color: orange;
+  border: 1px solid black;
   margin-top: 16px;
+  padding: 6px;
   position: relative;
   left: 73px;
 }
