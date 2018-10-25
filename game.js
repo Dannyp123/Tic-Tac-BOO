@@ -1,18 +1,30 @@
+// let name = document.querySelector("#name").value;
+
 function startGame() {
-  for (var i = 1; i <= 9; i++) {
-    clearingBoard(i);
-  }
-  document.turn = "X";
+  document.turn = "Pumpkin";
   document.winner = null;
   messageSpace(`Person who choose ${document.turn} get's to start!`);
+}
+
+function classFor(turn) {
+  if (turn === "Pumpkin") {
+    return "pumpkin";
+  } else {
+    return "skull";
+  }
 }
 
 function nextTurn(square) {
   if (document.winner != null) {
     messageSpace(`Person who choose ${document.turn} already Won!!`);
   } else {
-    if (square.innerText == "") {
-      square.innerText = document.turn;
+    if (
+      !(
+        square.classList.contains("pumpkin") ||
+        square.classList.contains("skull")
+      )
+    ) {
+      square.classList.add(classFor(document.turn));
       switchTurn();
     } else {
       messageSpace("Can not choose an already used square.");
@@ -27,10 +39,10 @@ function switchTurn() {
     );
     document.winner = document.turn;
   } else {
-    if (document.turn == "X") {
-      document.turn = "O";
+    if (document.turn == "Pumpkin") {
+      document.turn = "Skull";
     } else {
-      document.turn = "X";
+      document.turn = "Pumpkin";
     }
     messageSpace(`It is who choose ${document.turn} turn`);
   }
@@ -59,10 +71,11 @@ function findingTheWinner(move) {
 
 function checkingRows(a, b, c, move) {
   let solution = false;
+  let movesClass = classFor(move);
   if (
-    gettingActiveBlock(a) == move &&
-    gettingActiveBlock(b) == move &&
-    gettingActiveBlock(c) == move
+    gettingActiveBlock(a).classList.contains(movesClass) &&
+    gettingActiveBlock(b).classList.contains(movesClass) &&
+    gettingActiveBlock(c).classList.contains(movesClass)
   ) {
     solution = true;
   }
@@ -70,9 +83,17 @@ function checkingRows(a, b, c, move) {
 }
 
 function gettingActiveBlock(number) {
-  return document.querySelector("#square" + number).innerText;
+  return document.querySelectorAll(`.square`)[number - 1];
 }
 
-function clearingBoard(number) {
-  document.querySelector("#square" + number).innerText = "";
+function clearingBoard() {
+  let button = document.querySelector("#button");
+  button.addEventListener("click", function() {
+    document.location.reload();
+  });
+}
+clearingBoard();
+
+function addingImages() {
+  var image = document.querySelector(".square");
 }

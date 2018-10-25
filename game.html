@@ -14,8 +14,15 @@
 </head>
 
 <body onload="startGame()">
+    <div class="images card">
+        <h1 class="choice-header">Choices:</h1>
+        <div class="choosing-images">
+            <img id="pumpkin-choice" src="pumpkin.png">
+            <img id="skull-choice" src="skulls.png">
+        </div>
+    </div>
     <div class="game-header">
-        <h1 class="header"><i class="fas fa-skull-crossbones"></i> Tic-Tac-Toe <i class="fas fa-skull-crossbones"></i></h1>
+        <h1 class="header"><i class="fas fa-skull-crossbones"></i> Tic-Tac-BOO <i class="fas fa-skull-crossbones"></i></h1>
         <p id="messageHere" class="message"></p>
     </div>
     <div class="game-board">
@@ -36,7 +43,7 @@
                 <td class="square" id="square9" onclick="nextTurn(this)"></td>
             </tr>
         </table>
-        <button id="button"><a id="start-over" href="javascript: startGame();">Start Over</a></button>
+        <button id="button">Start Over</button>
     </div>
     <script src="game.js"></script>
 </body>

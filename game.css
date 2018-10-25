@@ -2,6 +2,7 @@ body {
   background-image: url("tictactoe-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  max-height: 200px;
 }
 
 .square {
@@ -33,9 +34,15 @@ body {
 }
 
 .game-board {
-  padding-top: 24px;
   width: 270px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 45px auto;
+  position: relative;
+  bottom: 300px;
+}
+.game-header {
+  padding-top: 32px;
+  position: relative;
+  bottom: 305px;
 }
 
 .header {
@@ -51,6 +58,7 @@ body {
   text-align: center;
   color: rgb(255, 166, 0);
   font-family: "Sancreek", cursive;
+  font-size: 16pt;
 }
 
 #start-over {
@@ -62,10 +70,61 @@ body {
 
 #button {
   background-color: orange;
-  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  font-family: "Sancreek", cursive;
+  font-size: 18pt;
+  border: none;
   border-radius: 4px;
   margin-top: 16px;
   padding: 6px;
   position: relative;
   left: 73px;
+}
+
+.pumpkin {
+  background-image: url("pumpkin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skull {
+  background-image: url("skulls.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pumpkin-choice {
+  width: 75px;
+  padding: 12px;
+}
+
+#skull-choice {
+  width: 75px;
+  padding: 12px;
+}
+.choice-header {
+  color: rgb(255, 166, 0);
+  font-family: "Sancreek", cursive;
+  position: relative;
+  left: 4px;
+}
+
+.images {
+  width: 200px;
+  position: relative;
+  top: 275px;
+  left: 150px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.349);
+  padding-left: 70px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.choosing-images {
+  position: relative;
+  left: 15px;
 }
