@@ -35,7 +35,7 @@ function nextTurn(square) {
 function switchTurn() {
   if (findingTheWinner(document.turn)) {
     messageSpace(
-      `WINNER WINNER CANDY FOR DINNER FOR WHO CHOOE ${document.turn}`
+      `WINNER WINNER CANDY FOR DINNER FOR WHO CHOOE THE ${document.turn.toUpperCase()}`
     );
     document.winner = document.turn;
   } else {
