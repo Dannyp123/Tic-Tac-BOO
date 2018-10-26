@@ -2,7 +2,6 @@ body {
   background-image: url("tictactoe-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 200px;
 }
 
 .square {
@@ -96,30 +95,34 @@ body {
 
 #pumpkin-choice {
   width: 75px;
-  padding: 12px;
+  padding-left: 45px;
+  padding-bottom: 24px;
 }
 
 #skull-choice {
   width: 75px;
-  padding: 12px;
+  padding-left: 45px;
+  padding-bottom: 12px;
 }
 .choice-header {
-  color: rgb(255, 166, 0);
+  color: black;
+  background-color: orange;
   font-family: "Sancreek", cursive;
+  text-align: center;
+  height: 45px;
   position: relative;
-  left: 4px;
+  bottom: 21px;
 }
 
 .images {
   width: 200px;
   position: relative;
-  top: 275px;
+  top: 290px;
   left: 150px;
 }
 
 .card {
   background-color: rgba(255, 255, 255, 0.349);
-  padding-left: 70px;
   border: 2px solid black;
   border-radius: 4px;
 }
