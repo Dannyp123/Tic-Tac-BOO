@@ -131,3 +131,9 @@ body {
   position: relative;
   left: 15px;
 }
+
+@media screen and (max-width: 250px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
